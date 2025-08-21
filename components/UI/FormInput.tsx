@@ -10,6 +10,7 @@ type FormInputProps = {
   type?: string
   icon?: IconType
   min?: any
+  name?: string
   placeholder?: string
 }
 
@@ -21,6 +22,7 @@ export default function FormInput({
   icon: Icon,
   placeholder,
   min,
+  name,
   ...rest
 }: FormInputProps) {
   return (

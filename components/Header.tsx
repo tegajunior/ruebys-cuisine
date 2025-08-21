@@ -49,7 +49,7 @@ const Header: React.FC = () => {
             <FiShoppingCart size={36} />
             {cartCount > 0 && (
               <motion.span
-                key={cartCount} // re-trigger animation when number changes
+                key={`drawer-count${cartCount}`} // re-trigger animation when number changes
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                 <FiShoppingCart size={30} />
                 {cartCount > 0 && (
                   <motion.span
-                    key={cartCount} // re-trigger animation when number changes
+                    key={`desktop-count${cartCount}`} // re-trigger animation when number changes
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.8, opacity: 0 }}
@@ -172,7 +172,7 @@ const Header: React.FC = () => {
                   <FiShoppingCart size={20} />
                   {cartCount > 0 && (
                     <motion.span
-                      key={cartCount} // re-trigger animation when number changes
+                      key={`mobile-count${cartCount}`} // re-trigger animation when number changes
                       initial={{ scale: 0.8, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0.8, opacity: 0 }}
