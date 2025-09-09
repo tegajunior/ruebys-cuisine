@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -76,6 +76,7 @@ export default function CheckoutPage() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             to: data.email,
+            replyTo: process.env.NEXT_PUBLIC_SALES_EMAIL,
             subject: 'Order Confirmation',
             customer: {
               firstName: data.firstName,
@@ -96,6 +97,7 @@ export default function CheckoutPage() {
             to: process.env.NEXT_PUBLIC_SALES_EMAIL,
             subject: 'New Order Received',
             customer: { ...data, deliveryTime: formattedTime },
+            replyTo: data.email,
             cart,
           }),
         }),
