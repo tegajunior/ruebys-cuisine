@@ -28,7 +28,7 @@ const CartItem: React.FC<CartItemProps> = (item) => {
 
       <div className="flex-1 min-w-[180px]">
         <h2 className="font-medium">{item.name}</h2>
-        <p className="text-gray-500 text-sm">${item.price.toFixed(2)}</p>
+        <p className="text-gray-500 text-sm">₦{item.price.toFixed(2)}</p>
         <QuantitySelector
           id={item.id}
           name={item.name}

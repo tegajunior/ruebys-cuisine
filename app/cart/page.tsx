@@ -75,7 +75,7 @@ export default function CartPage() {
             </h2>
             <div className="flex justify-between">
               <span>Subtotal</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>₦{subtotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between">
               <span>Delivery</span>
@@ -84,7 +84,7 @@ export default function CartPage() {
             <hr />
             <div className="flex justify-between font-bold">
               <span>Total</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>₦{subtotal.toFixed(2)}</span>
             </div>
             <Link
               href="/checkout"

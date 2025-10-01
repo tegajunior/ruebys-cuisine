@@ -6,16 +6,23 @@ import pizzaImage from '@/assets/images/pizza.jpg'
 import burgerImage from '@/assets/images/burger.jpg'
 import schnitzelImage from '@/assets/images/schnitzel.jpg'
 import tomatoSaladImage from '@/assets/images/tomato-salad.jpg'
+import stew from '@/assets/images/stew.jpg'
+import vegetableSoup from '@/assets/images/edikang-ikong-vegetable.jpg'
+import ofeAkwu from '@/assets/images/ofe-akwu.png'
+import egusiSoup from '@/assets/images/egusi-soup.jpg'
 import Link from 'next/link'
+import { MenuItem as MenuItemType } from '@/types'
 
 const MenuPage: React.FC = () => {
-  const menuItems = [
+  const menuItems: MenuItemType[] = [
     {
       id: 1,
-      name: 'Pizza',
-      description: 'Delicious cheese pizza',
-      price: 9.99,
-      imageUrl: pizzaImage,
+      name: 'Tomatoes Stew',
+      description:
+        'Customer will get 2 liters of this delicious tomatoes stew for 1 item added',
+      price: 15000,
+      imageUrl: stew,
+      minimumOrder: 1,
     },
     {
       id: 2,
@@ -23,6 +30,7 @@ const MenuPage: React.FC = () => {
       description: 'Juicy beef burger with lettuce and tomato',
       price: 8.99,
       imageUrl: burgerImage,
+      minimumOrder: 10,
     },
     {
       id: 3,
@@ -30,13 +38,34 @@ const MenuPage: React.FC = () => {
       description: 'Crispy breaded schnitzel',
       price: 12.99,
       imageUrl: schnitzelImage,
+      minimumOrder: 5,
     },
     {
       id: 4,
-      name: 'Salad',
-      description: 'Fresh tomato salad',
-      price: 7.99,
-      imageUrl: tomatoSaladImage,
+      name: 'Egusi Soup',
+      description:
+        'Customer will get 2 liters of this delicious egusi soup for 1 item added.',
+      price: 15000,
+      imageUrl: egusiSoup,
+      minimumOrder: 1,
+    },
+    {
+      id: 5,
+      name: 'Vegetable Soup',
+      description:
+        'Customer will get 2 liters of this delicious vegetable soup for 1 item added.',
+      price: 15000,
+      imageUrl: vegetableSoup,
+      minimumOrder: 1,
+    },
+    {
+      id: 6,
+      name: 'Banga stew',
+      description:
+        'Customer will get 2 liters of this delicious banga stew for 1 item added.',
+      price: 15000,
+      imageUrl: ofeAkwu,
+      minimumOrder: 1,
     },
   ]
 

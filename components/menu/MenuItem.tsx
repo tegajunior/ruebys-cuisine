@@ -1,23 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import QuantitySelector from './QuantitySelector'
+import type { MenuItem as MenuItemType } from '@/types'
 
-interface MenuItemProps {
-  id: number
-  name: string
-  description: string
-  price: number
-  imageUrl: any
-  onAddToCart?: () => void
-}
-
-const MenuItem: React.FC<MenuItemProps> = ({
+const MenuItem: React.FC<MenuItemType> = ({
   id,
   name,
   description,
   price,
   imageUrl,
-  onAddToCart,
+  minimumOrder,
 }) => {
   return (
     <div className="flex flex-col justify-between h-full rounded-xl bg-white shadow-sm hover:shadow-md transform transition-transform duration-300 hover:-translate-y-1 overflow-hidden">
@@ -49,7 +41,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
           className="text-lg font-semibold mb-4"
           style={{ color: 'var(--color-accent)' }}
         >
-          ${parseFloat(price.toString()).toFixed(2)}
+          ₦{parseFloat(price.toString()).toFixed(2)}
         </p>
 
         {/* Client-side quantity & cart logic */}
@@ -58,6 +50,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
           name={name}
           price={price}
           imageUrl={imageUrl}
+          minimumOrder={minimumOrder}
         />
       </div>
     </div>

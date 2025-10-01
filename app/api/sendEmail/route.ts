@@ -29,10 +29,10 @@ export async function POST(req: Request) {
           item.quantity
         }</td>
             <td style="padding: 8px; border: 1px solid #ddd; text-align: right;">
-              $${(item.price * item.quantity).toFixed(2)} 
-              <span style="color:#777; font-size: 12px;">(${
-                item.quantity
-              } × $${item.price.toFixed(2)})</span>
+              ₦
+${(item.price * item.quantity).toFixed(2)} 
+              <span style="color:#777; font-size: 12px;">(${item.quantity} × ₦
+${item.price.toFixed(2)})</span>
             </td>
           </tr>
         `
@@ -74,9 +74,8 @@ export async function POST(req: Request) {
                   ${itemsHtml}
                   <tr>
                     <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Grand Total</td>
-                    <td style="padding: 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;">$${total.toFixed(
-                      2
-                    )}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd; text-align: right; font-weight: bold;">₦
+${total.toFixed(2)}</td>
                   </tr>
                 </tbody>
               </table>

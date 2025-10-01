@@ -21,7 +21,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onRemove }) => {
       </div>
       <div className="flex items-center">
         <span className="text-lg font-bold">
-          ${(price * quantity).toFixed(2)}
+          ₦{(price * quantity).toFixed(2)}
         </span>
         <button
           className="ml-4 text-red-500 hover:text-red-700"

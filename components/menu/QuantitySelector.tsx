@@ -8,29 +8,27 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useCart } from '@/context/CartContext'
 import CartIconWithBadge from '@/components/cart/CartIconWithBadge'
 import { FiMinus, FiPlus } from 'react-icons/fi'
-import {
-  newItemSchema,
-  updateItemSchema,
-} from '@/models/validation/validationSchema'
-
-interface QuantitySelectorProps {
-  id: number
-  name: string
-  price: number
-  imageUrl: string
-}
-
-type NewItemFormData = z.infer<typeof newItemSchema>
-type UpdateItemFormData = z.infer<typeof updateItemSchema>
-
-const MIN_QUANTITY = 10
+import { updateItemSchema } from '@/models/validation/validationSchema'
+import { QuantitySelectorProps } from '@/types'
 
 const QuantitySelector: React.FC<QuantitySelectorProps> = ({
   id,
   name,
   price,
   imageUrl,
+  minimumOrder,
 }) => {
+  const newItemSchema = z.object({
+    quantity: z
+      .number()
+      .min(
+        minimumOrder ? minimumOrder : 10,
+        `Minimum quantity for new items is ${minimumOrder ? minimumOrder : 10}`
+      ),
+  })
+  type NewItemFormData = z.infer<typeof newItemSchema>
+  type UpdateItemFormData = z.infer<typeof updateItemSchema>
+  const MIN_QUANTITY = minimumOrder || 10
   const {
     register: registerNew,
     handleSubmit: handleSubmitNew,
@@ -126,7 +124,7 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
               className="w-16 border rounded px-2 py-1 text-center"
             />
             {errorsNew.quantity && (
-              <span className="text-red-500 text-sm">
+              <span className="text-red-500 text-[8.5px]">
                 {errorsNew.quantity.message}
               </span>
             )}
