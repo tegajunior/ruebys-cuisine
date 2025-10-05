@@ -28,10 +28,10 @@ const CheckoutSchema = z.object({
     (val) => {
       const chosen = new Date(val)
       const today = new Date()
-      const minDate = new Date(today.setDate(today.getDate() + 14))
+      const minDate = new Date(today.setDate(today.getDate() + 7)) // ⏳ at least 1 week from today
       return chosen >= minDate
     },
-    { message: 'Delivery date must be at least 2 weeks from today' }
+    { message: 'Delivery date must be at least 1 week from today' }
   ),
 })
 
@@ -177,10 +177,10 @@ export default function CheckoutPage() {
           error={errors.deliveryDate?.message}
           icon={FiCalendar}
           min={
-            new Date(Date.now() + 14 * 24 * 60 * 60 * 1000)
+            new Date(Date.now() + 6 * 24 * 60 * 60 * 1000)
               .toISOString()
               .split('T')[0]
-          } // ⏳ sets min selectable date to today + 14 days
+          } // ⏳ sets min selectable date to today + 6 days
         />
 
         <FormInput

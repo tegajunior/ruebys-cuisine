@@ -6,7 +6,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import FormInput from '@/components/UI/FormInput'
 import { FiUser, FiMail, FiMessageSquare, FiPhone } from 'react-icons/fi'
-import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa'
+import { FaWhatsapp, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
 
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
@@ -132,7 +132,6 @@ export default function ContactPage() {
       </form>
 
       {/* Social media links */}
-      {/* Social media links */}
       <div className="mt-8 text-center">
         <h2 className="text-lg font-semibold mb-2">Connect with us</h2>
         <div className="flex justify-center space-x-6">
@@ -144,7 +143,7 @@ export default function ContactPage() {
             <FaWhatsapp size={28} />
           </Link>
           <Link
-            href="https://facebook.com"
+            href="https://facebook.com/profile.php?id=100075868227813"
             target="_blank"
             className="text-blue-600 hover:scale-110 transition-transform"
           >
@@ -156,6 +155,13 @@ export default function ContactPage() {
             className="text-pink-500 hover:scale-110 transition-transform"
           >
             <FaInstagram size={28} />
+          </Link>
+          <Link
+            href="https://tiktok.com/@ruebyscuisine"
+            target="_blank"
+            className="text-pink-500 hover:scale-110 transition-transform"
+          >
+            <FaTiktok size={28} />
           </Link>
         </div>
       </div>

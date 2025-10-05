@@ -1,11 +1,11 @@
 import React from 'react'
+import Link from 'next/link'
+import { MenuItem as MenuItemType } from '@/types'
+
 import MenuItem from '@/components/menu/MenuItem'
 import ImageSlideshow from '@/components/image/ImageSlideShow'
 
-import pizzaImage from '@/assets/images/pizza.jpg'
-import burgerImage from '@/assets/images/burger.jpg'
 import eforiroSoup from '@/assets/images/efo-riro.jpg'
-import tomatoSaladImage from '@/assets/images/tomato-salad.jpg'
 import afangSoup from '@/assets/images/Afang-img1.jpg'
 import stew from '@/assets/images/stew.jpg'
 import vegetableSoup from '@/assets/images/edikang-ikong-vegetable.jpg'
@@ -21,10 +21,8 @@ import pepperSoup from '@/assets/images/Pepper-soup with assorted beef.jpg'
 import vegetableSauce from '@/assets/images/vegetable-sauce.jpeg'
 import pepperStew from '@/assets/images/Pepper-stew.jpg'
 import beefStew from '@/assets/images/Beef stew.jpg'
-import fishStew from "@/assets/images/Fish stew.jpg"
+import fishStew from '@/assets/images/Fish stew.jpg'
 import partyRice from '@/assets/images/party-rice.jpg'
-import Link from 'next/link'
-import { MenuItem as MenuItemType } from '@/types'
 
 const MenuPage: React.FC = () => {
   const menuItems: MenuItemType[] = [
@@ -40,7 +38,8 @@ const MenuPage: React.FC = () => {
     {
       id: 2,
       name: 'Afang Soup (2 liters)',
-      description: 'Traditional vegetable soup with waterleaf and afang leaves + 10piece of protein for 1 item added',
+      description:
+        'Traditional vegetable soup with waterleaf and afang leaves + 10piece of protein for 1 item added',
       price: 25000,
       imageUrl: afangSoup,
       minimumOrder: 1,
@@ -48,10 +47,11 @@ const MenuPage: React.FC = () => {
     {
       id: 3,
       name: 'Efo-riro (2 liters)',
-      description: 'Flavorful fresh spinach soup with locust beans and diced cowskin + 10piece of protein for 1 item added.',
+      description:
+        'Flavorful fresh spinach soup with locust beans and diced cowskin + 10piece of protein for 1 item added.',
       price: 20000,
       imageUrl: eforiroSoup,
-      minimumOrder: 5,
+      minimumOrder: 1,
     },
     {
       id: 4,
@@ -89,7 +89,7 @@ const MenuPage: React.FC = () => {
       imageUrl: bitterleafSoup,
       minimumOrder: 1,
     },
-     {
+    {
       id: 8,
       name: 'Oha Soup (2 liters)',
       description:
@@ -98,7 +98,7 @@ const MenuPage: React.FC = () => {
       imageUrl: ohaSoup,
       minimumOrder: 1,
     },
-     {
+    {
       id: 9,
       name: 'Ogbonno Soup (2 liters)',
       description:
@@ -152,7 +152,7 @@ const MenuPage: React.FC = () => {
       imageUrl: vegetableSauce,
       minimumOrder: 1,
     },
-     {
+    {
       id: 15,
       name: 'Pepper Stew (2 liters)',
       description:
@@ -161,7 +161,7 @@ const MenuPage: React.FC = () => {
       imageUrl: pepperStew,
       minimumOrder: 1,
     },
-     {
+    {
       id: 16,
       name: 'Beef Stew (2 liters)',
       description:
@@ -181,13 +181,13 @@ const MenuPage: React.FC = () => {
     },
     {
       id: 18,
-      name: 'Party rice (10 plates minimum)',
+      name: 'Party rice (10 packs minimum)',
       description:
         'Perfect for events, gatherings, and celebrations. Available option of rice include: Jollof rice, Fried rice, White rice, Coconut rice and Asun rice. Add-ons available: Extra protein, coleslaw, plantain',
       price: 3500,
       imageUrl: partyRice,
       minimumOrder: 10,
-    }
+    },
   ]
 
   return (
@@ -216,7 +216,15 @@ const MenuPage: React.FC = () => {
         {/* Text */}
         <div className="max-w-md text-center md:text-left text-white">
           <h3 className="mb-6 text-lg md:text-xl leading-relaxed">
-           Browse our authentic Nigerian menu and order your favorite soups, stews, and party rice! From rich Egusi to flavorful Efo Riro and traditional Banga stew, every dish is prepared fresh using traditional cooking methods and quality ingredients. Each order includes 2 litres of delicious soup or stew plus 10 pieces of protein—perfect for you to enjoy throughout the week. Whether you're craving classic comfort soups or trying something new, we'll deliver homemade goodness straight to your door—hot, fresh, and ready to enjoy!
+            Browse our authentic Nigerian menu and order your favorite soups,
+            stews, and party rice! From rich Egusi to flavorful Efo Riro and
+            traditional Banga stew, every dish is prepared fresh using
+            traditional cooking methods and quality ingredients. Each order
+            includes 2 litres of delicious soup or stew plus 10 pieces of
+            protein—perfect for you to enjoy throughout the week. Whether you're
+            craving classic comfort soups or trying something new, we'll deliver
+            homemade goodness straight to your door—hot, fresh, and ready to
+            enjoy!
           </h3>
           <Link
             href="#menu-grid"
