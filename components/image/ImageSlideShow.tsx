@@ -2,23 +2,20 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-import burgerImg from '@/assets/images/burger.jpg'
-import curryImg from '@/assets/images/curry.jpg'
-import dumplingsImg from '@/assets/images/dumplings.jpg'
-import macncheeseImg from '@/assets/images/macncheese.jpg'
-import pizzaImg from '@/assets/images/pizza.jpg'
-import schnitzelImg from '@/assets/images/schnitzel.jpg'
-import tomatoSaladImg from '@/assets/images/tomato-salad.jpg'
 import classes from './image-slideshow.module.css'
 
+import vegetableSoup from '@/assets/images/edikang-ikong-vegetable.jpg'
+import bitterleafSoup from '@/assets/images/Bitterleaf soup-2.jpg'
+import okraSoup from '@/assets/images/okra-soup-2.jpg'
+import beefStew from '@/assets/images/Beef stew.jpg'
+import fishStew from '@/assets/images/Fish stew.jpg'
+
 const images = [
-  { image: burgerImg, alt: 'A delicious, juicy burger' },
-  { image: curryImg, alt: 'A delicious, spicy curry' },
-  { image: dumplingsImg, alt: 'Steamed dumplings' },
-  { image: macncheeseImg, alt: 'Mac and cheese' },
-  { image: pizzaImg, alt: 'A delicious pizza' },
-  { image: schnitzelImg, alt: 'A delicious schnitzel' },
-  { image: tomatoSaladImg, alt: 'A delicious tomato salad' },
+  { image: bitterleafSoup, alt: 'Bitterleaf soup' },
+  { image: vegetableSoup, alt: 'Edikang Ikong vegetable soup' },
+  { image: okraSoup, alt: 'Okra soup' },
+  { image: beefStew, alt: 'Beef stew' },
+  { image: fishStew, alt: 'Fish stew' },
 ]
 
 export default function ImageSlideshow() {

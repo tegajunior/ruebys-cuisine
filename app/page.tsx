@@ -1,10 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import customerIconImage from '@/assets/images/customer-icon.png'
 import browseFoodMenuImage from '@/assets/images/browse-food-menu.jpg'
 import checkoutOrderImage from '@/assets/images/checkout2.jpg'
-import foodDeliveryImage from '@/assets/images/delivery.jpg'
+import foodDeliveryImage from '@/assets/images/delivery-no-bg.png'
 
 import TestimonialCard from '@/components/TestimonialCard'
 import testimonials from '@/data/testimonials.json'
@@ -18,10 +17,13 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-4">Rueby's Cuisine</h1>
-            <p className="text-xl mb-6">
-              Authentic Nigerian Soups & Stews Delivered Fresh Across Abuja<br/>
-              Get 2 litres of homemade Nigerian soup or stew with 10 pieces of protein delivered to your doorstep.<br/>Perfect for busy professionals, singles, and meal prep lovers.
-
+            <p className="text-sm md:text-xl mb-6">
+              Authentic Nigerian Soups & Stews Delivered Fresh Across Abuja
+              <br />
+              Get 2 litres of homemade Nigerian soup or stew with 10 pieces of
+              protein delivered to your doorstep.
+              <br />
+              Perfect for busy professionals, singles, and meal prep lovers.
             </p>
             <Link
               href="/menu"
@@ -34,7 +36,7 @@ const HomePage: React.FC = () => {
       </div>
       <section className="py-12 px-6">
         <h2 className="text-2xl font-bold text-center md:text-left mb-8 text-primary">
-         How to Order - Simple 3-Step Process
+          How to Order - Simple 3-Step Process
         </h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div className="text-center">
