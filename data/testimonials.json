@@ -1,17 +1,20 @@
 [
   {
-    "text": "The food is always fresh and tasty. Highly recommend Ruby's Cuisine!",
-    "name": "John",
-    "phone": "07065569189"
+    "text": "I order from Rueby's cuisine every week. Their Egusi soup tastes exactly like my mom's cooking! The portion suits my expectation and the protein is always fresh. As a working professional with no time to cook, this has been a lifesaver.",
+    "name": "Kumali",
+    "location": "Gwarinpa, Abuja",
+    "phone": "09069784970"
   },
   {
-    "text": "Ruby's Cuisine has the best delivery service in town. Always on time!",
-    "name": "Jane",
-    "phone": "08012345678"
+    "text": "I've tried many food delivery services, but Rueby's Cuisine stands out. Always on time, food arrives hot, and the quality is consistently excellent. I've been a customer for a very long time and there is no reason to stop patronizing. I will recommend Rueby's cuisine everytime",
+    "name": "David",
+    "location": "Kubwa, Abuja",
+    "phone": "07068922497"
   },
   {
-    "text": "I love the variety of dishes available. Ruby's Cuisine never disappoints!",
-    "name": "Alice",
-    "phone": "09098765432"
+    "text": "I order 3 different soups bi-weekly and that set me up for 2 complete week. The variety is amazing and the taste never disappoints. Great value for money too—2 litres lasts me several meals and I always recommend Rueby's cuisine for event delivery",
+    "name": "James",
+    "location": "Utako, Abuja",
+    "phone": "09066188857"
   }
 ]

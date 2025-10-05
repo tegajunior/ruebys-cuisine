@@ -19,7 +19,9 @@ const HomePage: React.FC = () => {
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-4">Rueby's Cuisine</h1>
             <p className="text-xl mb-6">
-              Order fresh, tasty meals delivered to your door!
+              Authentic Nigerian Soups & Stews Delivered Fresh Across Abuja<br/>
+              Get 2 litres of homemade Nigerian soup or stew with 10 pieces of protein delivered to your doorstep.<br/>Perfect for busy professionals, singles, and meal prep lovers.
+
             </p>
             <Link
               href="/menu"
@@ -32,7 +34,7 @@ const HomePage: React.FC = () => {
       </div>
       <section className="py-12 px-6">
         <h2 className="text-2xl font-bold text-center md:text-left mb-8 text-primary">
-          How It Works
+         How to Order - Simple 3-Step Process
         </h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div className="text-center">

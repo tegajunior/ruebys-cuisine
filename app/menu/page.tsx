@@ -4,12 +4,25 @@ import ImageSlideshow from '@/components/image/ImageSlideShow'
 
 import pizzaImage from '@/assets/images/pizza.jpg'
 import burgerImage from '@/assets/images/burger.jpg'
-import schnitzelImage from '@/assets/images/schnitzel.jpg'
+import eforiroSoup from '@/assets/images/efo-riro.jpg'
 import tomatoSaladImage from '@/assets/images/tomato-salad.jpg'
+import afangSoup from '@/assets/images/Afang-img1.jpg'
 import stew from '@/assets/images/stew.jpg'
 import vegetableSoup from '@/assets/images/edikang-ikong-vegetable.jpg'
 import ofeAkwu from '@/assets/images/ofe-akwu.png'
 import egusiSoup from '@/assets/images/egusi-soup.jpg'
+import bitterleafSoup from '@/assets/images/Bitterleaf soup-2.jpg'
+import ohaSoup from '@/assets/images/oha-soup.jpg'
+import ogbonnoSoup from '@/assets/images/Ogbono-soup-2.jpg'
+import okraSoup from '@/assets/images/okra-soup-2.jpg'
+import whiteSoup from '@/assets/images/white-soup-2.jpg'
+import groundnutSoup from '@/assets/images/Groundnut-soup-1.jpg'
+import pepperSoup from '@/assets/images/Pepper-soup with assorted beef.jpg'
+import vegetableSauce from '@/assets/images/vegetable-sauce.jpeg'
+import pepperStew from '@/assets/images/Pepper-stew.jpg'
+import beefStew from '@/assets/images/Beef stew.jpg'
+import fishStew from "@/assets/images/Fish stew.jpg"
+import partyRice from '@/assets/images/party-rice.jpg'
 import Link from 'next/link'
 import { MenuItem as MenuItemType } from '@/types'
 
@@ -17,56 +30,164 @@ const MenuPage: React.FC = () => {
   const menuItems: MenuItemType[] = [
     {
       id: 1,
-      name: 'Tomatoes Stew',
+      name: 'Tomatoes Stew (2 liters)',
       description:
-        'Customer will get 2 liters of this delicious tomatoes stew for 1 item added',
-      price: 15000,
+        'Classic Nigerian red stew with fresh tomatoes and zero colesterol soya oil + 10 piece of protein for 1 item added',
+      price: 20000,
       imageUrl: stew,
       minimumOrder: 1,
     },
     {
       id: 2,
-      name: 'Burger',
-      description: 'Juicy beef burger with lettuce and tomato',
-      price: 8.99,
-      imageUrl: burgerImage,
-      minimumOrder: 10,
+      name: 'Afang Soup (2 liters)',
+      description: 'Traditional vegetable soup with waterleaf and afang leaves + 10piece of protein for 1 item added',
+      price: 25000,
+      imageUrl: afangSoup,
+      minimumOrder: 1,
     },
     {
       id: 3,
-      name: 'Schnitzel',
-      description: 'Crispy breaded schnitzel',
-      price: 12.99,
-      imageUrl: schnitzelImage,
+      name: 'Efo-riro (2 liters)',
+      description: 'Flavorful fresh spinach soup with locust beans and diced cowskin + 10piece of protein for 1 item added.',
+      price: 20000,
+      imageUrl: eforiroSoup,
       minimumOrder: 5,
     },
     {
       id: 4,
-      name: 'Egusi Soup',
+      name: 'Egusi Soup (2 liters)',
       description:
-        'Customer will get 2 liters of this delicious egusi soup for 1 item added.',
-      price: 15000,
+        'Rich, nutty melon seed soup with pumpkin(ugwu) vegetable + 10 piece of protein for 1 item added.',
+      price: 20000,
       imageUrl: egusiSoup,
       minimumOrder: 1,
     },
     {
       id: 5,
-      name: 'Vegetable Soup',
+      name: 'Vegetable Soup (2 liters)',
       description:
-        'Customer will get 2 liters of this delicious vegetable soup for 1 item added.',
-      price: 15000,
+        'Fresh mixed pumpkin(ugwu) and waterleaf vegetables + 10 piece of protein for 1 item added.',
+      price: 20000,
       imageUrl: vegetableSoup,
       minimumOrder: 1,
     },
     {
       id: 6,
-      name: 'Banga stew',
+      name: 'Banga stew (2 liters)',
       description:
-        'Customer will get 2 liters of this delicious banga stew for 1 item added.',
-      price: 15000,
+        'Palm fruit stew with traditional spices + 10 piece of protein for 1 item added.',
+      price: 20000,
       imageUrl: ofeAkwu,
       minimumOrder: 1,
     },
+    {
+      id: 7,
+      name: 'Bitter leaf Soup (2 liters)',
+      description:
+        'Traditional bitter leaf with authentic Nigerian spices + 10 piece of protein for 1 item added.',
+      price: 20000,
+      imageUrl: bitterleafSoup,
+      minimumOrder: 1,
+    },
+     {
+      id: 8,
+      name: 'Oha Soup (2 liters)',
+      description:
+        'Eastern delicacy with oha leaves and uziza + 10 piece of protein for 1 item added.',
+      price: 20000,
+      imageUrl: ohaSoup,
+      minimumOrder: 1,
+    },
+     {
+      id: 9,
+      name: 'Ogbonno Soup (2 liters)',
+      description:
+        'Smooth draw soup made with ground ogbono seeds + 10 piece of protein for 1 item added.',
+      price: 20000,
+      imageUrl: ogbonnoSoup,
+      minimumOrder: 1,
+    },
+    {
+      id: 10,
+      name: 'Okra Soup (2 liters)',
+      description:
+        'Fresh okra in a delicious, slimy Nigerian style + 10 piece of protein for 1 item added.',
+      price: 20000,
+      imageUrl: okraSoup,
+      minimumOrder: 1,
+    },
+    {
+      id: 11,
+      name: 'White Soup - ofe nsala (2 liters)',
+      description:
+        'Light, peppery soup with no palm oil + 10 piece of assorted meat for 1 item added.',
+      price: 25000,
+      imageUrl: whiteSoup,
+      minimumOrder: 1,
+    },
+    {
+      id: 12,
+      name: 'Groundnut Soup (2 liters)',
+      description:
+        'Creamy peanut-based soup with rich flavors + 10 piece of protein for 1 item added.',
+      price: 20000,
+      imageUrl: groundnutSoup,
+      minimumOrder: 1,
+    },
+    {
+      id: 13,
+      name: 'Pepper Soup (2 liters)',
+      description:
+        'Spicy, aromatic broth perfect to satisfy your crave + assorted beef/goatmeat or catfish for 1 item added.',
+      price: 25000,
+      imageUrl: pepperSoup,
+      minimumOrder: 1,
+    },
+    {
+      id: 14,
+      name: ' Vegetable Stew (2 litres)',
+      description:
+        'Garden-fresh vegetables in savory sauce + 10 piece of protein for 1 item added.',
+      price: 25000,
+      imageUrl: vegetableSauce,
+      minimumOrder: 1,
+    },
+     {
+      id: 15,
+      name: 'Pepper Stew (2 liters)',
+      description:
+        'Spicy, flavorful stew with scotch bonnet peppers and onions + 10 piece of protein and 2 eggs for 1 item added.',
+      price: 20000,
+      imageUrl: pepperStew,
+      minimumOrder: 1,
+    },
+     {
+      id: 16,
+      name: 'Beef Stew (2 liters)',
+      description:
+        'Rich beef stew with tender meat pieces + 10 piece of protein for 1 item added.',
+      price: 25000,
+      imageUrl: beefStew,
+      minimumOrder: 1,
+    },
+    {
+      id: 17,
+      name: 'Fish Stew',
+      description:
+        'Delicious fish stew with shredded piece of fish and aromatic spices for 1 item added.',
+      price: 20000,
+      imageUrl: fishStew,
+      minimumOrder: 1,
+    },
+    {
+      id: 18,
+      name: 'Party rice (10 plates minimum)',
+      description:
+        'Perfect for events, gatherings, and celebrations. Available option of rice include: Jollof rice, Fried rice, White rice, Coconut rice and Asun rice. Add-ons available: Extra protein, coleslaw, plantain',
+      price: 3500,
+      imageUrl: partyRice,
+      minimumOrder: 10,
+    }
   ]
 
   return (
@@ -95,11 +216,7 @@ const MenuPage: React.FC = () => {
         {/* Text */}
         <div className="max-w-md text-center md:text-left text-white">
           <h3 className="mb-6 text-lg md:text-xl leading-relaxed">
-            Browse our delicious menu and order your favorite meals online! From
-            sizzling appetizers to hearty mains and indulgent desserts, every
-            dish is crafted with fresh, high-quality ingredients. Whether you’re
-            craving comfort food or something adventurous, we’ll deliver the
-            flavor straight to your door — hot, fresh, and ready to enjoy.
+           Browse our authentic Nigerian menu and order your favorite soups, stews, and party rice! From rich Egusi to flavorful Efo Riro and traditional Banga stew, every dish is prepared fresh using traditional cooking methods and quality ingredients. Each order includes 2 litres of delicious soup or stew plus 10 pieces of protein—perfect for you to enjoy throughout the week. Whether you're craving classic comfort soups or trying something new, we'll deliver homemade goodness straight to your door—hot, fresh, and ready to enjoy!
           </h3>
           <Link
             href="#menu-grid"
