@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           >
             <Image
               src={logoImage}
-              alt="Ruby's Cuisine"
+              alt="Rueby's Cuisine Abuja Food Delivery"
               priority
               width={100}
               height={50}

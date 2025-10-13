@@ -24,6 +24,12 @@ import beefStew from '@/assets/images/Beef stew.jpg'
 import fishStew from '@/assets/images/Fish stew.jpg'
 import partyRice from '@/assets/images/party-rice.jpg'
 
+import Head from 'next/head'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: "Menu - Rueby's Cuisine",
+}
+
 const MenuPage: React.FC = () => {
   const menuItems: MenuItemType[] = [
     {
@@ -195,6 +201,79 @@ const MenuPage: React.FC = () => {
       className="container mx-auto px-6 py-10"
       style={{ backgroundColor: 'var(--color-background)' }}
     >
+      {/* Add Meta Tags for the Menu Page */}
+
+      <Head>
+        {/* Title for SEO */}
+        <title>Menu - Rueby's Cuisine</title>
+
+        {/* Meta description for the menu page */}
+        <meta
+          name="description"
+          content="Browse the menu at Rueby's Cuisine for delicious Nigerian soups, stews, and party rice. From rich Egusi soup to flavorful Efo Riro, we have something for everyone."
+        />
+
+        {/* Open Graph Meta Tags for Facebook and social sharing */}
+        <meta
+          property="og:title"
+          content="Menu - Rueby's Cuisine"
+        />
+        <meta
+          property="og:description"
+          content="Explore Rueby's Cuisine menu offering fresh Nigerian soups, stews, and party rice. We deliver right to your door in Abuja."
+        />
+        <meta
+          property="og:image"
+          content="https://chidiebereuzoma-nextjs-demo-user-image.s3.us-east-1.amazonaws.com/RuebysCuisineFlyer.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://www.ruebyscuisine.food/menu"
+        />
+        <meta
+          property="og:site_name"
+          content="Rueby's Cuisine"
+        />
+        <meta
+          property="og:type"
+          content="website"
+        />
+        <meta
+          property="og:locale"
+          content="en_US"
+        />
+
+        {/* Structured Data (Schema Markup) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Restaurant',
+              name: "Rueby's Cuisine",
+              description:
+                "Browse the delicious Nigerian soups, stews, and party rice available on the Rueby's Cuisine menu. Order now for home delivery in Abuja. Our menu features delicious dishes like Egusi soup, Efo Riro, Afang soup, Oha soup, Okra soup, Ogbono soup, White soup (Ofe Nsala), Vegetable soup, Banga soup, and more.",
+              logo: 'https://chidiebereuzoma-nextjs-demo-user-image.s3.us-east-1.amazonaws.com/site-logo.png',
+              url: 'https://www.ruebyscuisine.food/menu',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Abuja',
+                addressLocality: 'Abuja',
+                addressRegion: 'FCT',
+                postalCode: '901101',
+                addressCountry: 'NG',
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+2348149493000',
+                contactType: 'Customer Service',
+                areaServed: 'NG',
+                availableLanguage: 'English',
+              },
+            }),
+          }}
+        />
+      </Head>
       {/* Page Heading */}
       <h1
         className="text-3xl md:text-4xl font-extrabold text-center md:text-left mb-10"

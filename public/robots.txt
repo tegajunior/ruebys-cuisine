@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.ruebyscuisine.food
+
+# Sitemaps
+Sitemap: https://www.ruebyscuisine.food/sitemap.xml
