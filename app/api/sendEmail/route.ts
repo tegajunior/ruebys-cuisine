@@ -2,12 +2,9 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic' // ensure POST isn’t cached
 
 import { NextResponse } from 'next/server'
-import sendgrid from '@sendgrid/mail'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
-
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY as string)
 
 export async function POST(req: Request) {
   try {
@@ -44,7 +41,7 @@ ${item.price.toFixed(2)})</span>
       0
     )
     await resend.emails.send({
-      from: "Rueby's Cuisine <hello@chidiebereuzoma.dev>",
+      from: "Rueby's Cuisine <hello@ruebyscuisine.food>",
       to,
       replyTo,
       subject,
@@ -71,6 +68,7 @@ ${item.price.toFixed(2)})</span>
                   </tr>
                 </thead>
                 <tbody>
+                
                   ${itemsHtml}
                   <tr>
                     <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Grand Total</td>
@@ -83,6 +81,7 @@ ${total.toFixed(2)}</td>
               <p style="margin-top: 20px;">📍 Delivery Address: ${
                 customer.address
               }</p>
+              <p>📞 Customer Phone: ${customer.phone}</p>
               <p>📅 Delivery Date: ${customer.deliveryDate} at ${
         customer.deliveryTime
       }</p>
