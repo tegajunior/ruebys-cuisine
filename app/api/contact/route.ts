@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
     // 1️⃣ Send to your business email
     await resend.emails.send({
-      from: "Rueby's Cuisine <hello@chidiebereuzoma.dev>",
+      from: "Rueby's Cuisine <hello@ruebyscuisine.food>",
       to: process.env.NEXT_PUBLIC_SALES_EMAIL as string,
       subject: `📩 New Contact Message from ${name}`,
       replyTo: email,
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
     // 2️⃣ Send auto-reply to the customer
 
     await resend.emails.send({
-      from: "Rueby's Cuisine <hello@chidiebereuzoma.dev>",
+      from: "Rueby's Cuisine <hello@ruebyscuisine.food>",
       to: email,
       subject: "✅ Thanks for contacting Rueby's Cuisine!",
       replyTo: process.env.NEXT_PUBLIC_SALES_EMAIL as string,

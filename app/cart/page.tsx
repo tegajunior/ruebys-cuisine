@@ -15,9 +15,9 @@ export default function CartPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
-      <h1 className="text-2xl text-primary font-bold mb-2">Your Cart</h1>
+      <h1 className="text-2xl text-primary font-bold mb-2">Your Order</h1>
       <p className="text-secondary font-semibold mb-6 -mt-3">
-        {cart.length} item{cart.length !== 1 && 's'} in your cart
+        {cart.length} dish{cart.length !== 1 && 'es'} in your order
       </p>
 
       {cart.length === 0 ? (

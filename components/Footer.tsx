@@ -13,6 +13,8 @@ const Footer: React.FC = () => {
           <a
             href="https://chidiebereuzoma.dev"
             className="text-blue-500 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             &nbsp; Chidiebere Uzoma
           </a>

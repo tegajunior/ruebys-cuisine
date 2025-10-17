@@ -107,7 +107,7 @@ export default function CheckoutPage() {
       if (responses.every((res) => res.ok)) {
         setToast({
           type: 'success',
-          message: '🎉 Order placed successfully! Check your email.',
+          message: '🎉 Order received successfully! Check your email.',
         })
         clearCart()
         reset()
@@ -123,7 +123,7 @@ export default function CheckoutPage() {
       setToast({
         type: 'error',
         message:
-          '❌ Something went wrong sending your order confirmation. Please try again.',
+          '❌ Something went wrong receiving your order. Please try again.',
       })
       setTimeout(() => {
         setToast(null)

@@ -150,7 +150,7 @@ export default function ContactPage() {
             <FaFacebook size={28} />
           </Link>
           <Link
-            href="https://instagram.com"
+            href="https://instagram.com/ruebyscuisine"
             target="_blank"
             className="text-pink-500 hover:scale-110 transition-transform"
           >
