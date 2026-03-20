@@ -10,7 +10,7 @@ export default function CartPage() {
 
   const subtotal = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   )
 
   return (
@@ -79,12 +79,12 @@ export default function CartPage() {
             </div>
             <div className="flex justify-between">
               <span>Delivery</span>
-              <span className="text-green-500">Free</span>
+              <span className="text-green-500">???</span>
             </div>
             <hr />
             <div className="flex justify-between font-bold">
               <span>Total</span>
-              <span>₦{subtotal.toFixed(2)}</span>
+              <span>₦{subtotal.toFixed(2)} + delivery fee</span>
             </div>
             <Link
               href="/checkout"
